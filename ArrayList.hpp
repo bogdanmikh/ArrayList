@@ -115,7 +115,7 @@ public:
         return (size_t == 0) ? true : false;
     }
     // выводит список
-    void input_list() {
+    void print_list() {
         for (int i = 0; i < size_t; i++) {
             std::cout << data[i] << " ";
         }
