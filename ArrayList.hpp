@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <cassert>
 
 template <typename T>
 class ArrayList
@@ -29,6 +30,11 @@ public:
             reserve(reserve_t);
             data[size_t++] = Val;
         }
+    }
+    // оператор возращения значения 
+    T& operator [] (uint32_t i) {
+        assert(i >=0 && i < size_t);
+        return data[i];
     }
     // добавляет в конец массива элемент
     void push_front(const T &Val) {
